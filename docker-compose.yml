@@ -1,0 +1,8 @@
+version: '2'
+services:
+    sonar:
+        container_name: aiwin-sonar
+        image: aiwin/sonarqube-plugins:latest
+        ports:
+            - 9000:9000
+            - 9092:9092
