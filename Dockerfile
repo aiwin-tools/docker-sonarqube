@@ -1,4 +1,4 @@
-FROM sonarqube:5.5-alpine
+FROM sonarqube:lts-alpine
 
 MAINTAINER Javier Boo "javier.boo@aiwin.es"
 
