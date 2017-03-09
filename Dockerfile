@@ -13,4 +13,4 @@ ENV HIPCHAT_PLUGIN_VERSION 0.2
 RUN set -x && curl -sLo $HOME/plugins/sonar-hipchat-plugin-${HIPCHAT_PLUGIN_VERSION}.jar \
 	https://github.com/dbac2002/sonar-hipchat-plugin/releases/download/${HIPCHAT_PLUGIN_VERSION}/sonar-hipchat-plugin-${HIPCHAT_PLUGIN_VERSION}.jar
 
-CMD cp $HOME/plugins/* $SONARQUBE_HOME/extensions/plugins && $SONARQUBE_HOME/bin/run.sh
+RUN cp $HOME/plugins/* $SONARQUBE_HOME/extensions/plugins
