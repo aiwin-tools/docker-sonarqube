@@ -26,6 +26,10 @@ ENV ANDROID_LINT_PLUGIN_VERSION 1.1
 RUN set -x && curl -sLo $HOME/plugins/sonar-android-plugin-${ANDROID_LINT_PLUGIN_VERSION}.jar \
 	https://github.com/SonarQubeCommunity/sonar-android/releases/download/${ANDROID_LINT_PLUGIN_VERSION}/sonar-android-plugin-${ANDROID_LINT_PLUGIN_VERSION}.jar
 
+ENV JAVA_PLUGIN_VERSION 4.6.0.8784
+RUN set -x && curl -sLo $HOME/plugins/sonar-java-plugin-${JAVA_PLUGIN_VERSION}.jar \
+	https://sonarsource.bintray.com/Distribution/sonar-java-plugin/sonar-java-plugin-${JAVA_PLUGIN_VERSION}.jar
+
 # End Plugins
 
 RUN cp $HOME/plugins/* $SONARQUBE_HOME/extensions/plugins
