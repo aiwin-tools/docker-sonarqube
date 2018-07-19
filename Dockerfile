@@ -36,6 +36,8 @@ ENV KOTLIN_PLUGIN_VERSION 0.4.1
 RUN set -x && curl -sLo $HOME/plugins/sonar-kotlin-plugin-${KOTLIN_PLUGIN_VERSION}.jar \
 	https://github.com/arturbosch/sonar-kotlin/releases/download/${KOTLIN_PLUGIN_VERSION}/sonar-kotlin-${KOTLIN_PLUGIN_VERSION}.jar
 
+COPY sonar-branch-community-1.0.1.jar $HOME/plugins/
+
 # End Plugins
 
 RUN cp $HOME/plugins/* $SONARQUBE_HOME/extensions/plugins
