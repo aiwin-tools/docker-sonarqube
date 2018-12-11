@@ -32,7 +32,7 @@ ENV JAVA_PLUGIN_VERSION 4.6.0.8784
 RUN set -x && curl -sLo $HOME/plugins/sonar-java-plugin-${JAVA_PLUGIN_VERSION}.jar \
 	https://sonarsource.bintray.com/Distribution/sonar-java-plugin/sonar-java-plugin-${JAVA_PLUGIN_VERSION}.jar
 
-ENV KOTLIN_PLUGIN_VERSION 0.5.2
+ENV KOTLIN_PLUGIN_VERSION 0.4.1
 RUN set -x && curl -sLo $HOME/plugins/sonar-kotlin-plugin-${KOTLIN_PLUGIN_VERSION}.jar \
 	https://github.com/arturbosch/sonar-kotlin/releases/download/${KOTLIN_PLUGIN_VERSION}/sonar-kotlin-${KOTLIN_PLUGIN_VERSION}.jar
 
