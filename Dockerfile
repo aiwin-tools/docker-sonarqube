@@ -16,10 +16,6 @@ ENV SLACK_PLUGIN_VERSION 2.1.2
 RUN set -x && curl -sLo $HOME/plugins/cks-slack-notifier-${SLACK_PLUGIN_VERSION}.jar \
 	https://github.com/kogitant/sonar-slack-notifier-plugin/releases/download/${SLACK_PLUGIN_VERSION}/cks-slack-notifier-${SLACK_PLUGIN_VERSION}.jar
 
-ENV OBJECTIVE_C_PLUGIN_VERSION 0.6.2
-RUN set -x && curl -sLo $HOME/plugins/backelite-sonar-objective-c-plugin-${OBJECTIVE_C_PLUGIN_VERSION}.jar \
-	https://github.com/Backelite/sonar-objective-c/releases/download/${OBJECTIVE_C_PLUGIN_VERSION}/backelite-sonar-objective-c-plugin-${OBJECTIVE_C_PLUGIN_VERSION}.jar
-
 ENV SWIFT_PLUGIN_VERSION 0.4.2
 RUN set -x && curl -sLo $HOME/plugins/backelite-sonar-swift-plugin-${SWIFT_PLUGIN_VERSION}.jar \
 	https://github.com/Backelite/sonar-swift/releases/download/${SWIFT_PLUGIN_VERSION}/backelite-sonar-swift-plugin-${SWIFT_PLUGIN_VERSION}.jar
