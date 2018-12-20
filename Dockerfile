@@ -10,7 +10,7 @@ RUN mkdir -p $HOME/plugins
 
 ENV GITLAB_PLUGIN_VERSION 3.0.2
 RUN set -x && curl -sLo $HOME/plugins/sonar-gitlab-plugin-${GITLAB_PLUGIN_VERSION}.jar \
-	http://nexus.talanlabs.com/content/groups/public_release/com/synaptix/sonar-gitlab-plugin/${GITLAB_PLUGIN_VERSION}/sonar-gitlab-plugin-${GITLAB_PLUGIN_VERSION}.jar
+	https://github.com/gabrie-allaigre/sonar-gitlab-plugin/releases/download/${GITLAB_PLUGIN_VERSION}/sonar-gitlab-plugin-${GITLAB_PLUGIN_VERSION}.jar
 
 ENV SLACK_PLUGIN_VERSION 2.1.2
 RUN set -x && curl -sLo $HOME/plugins/cks-slack-notifier-${SLACK_PLUGIN_VERSION}.jar \
@@ -24,9 +24,9 @@ ENV ANDROID_LINT_PLUGIN_VERSION 1.1
 RUN set -x && curl -sLo $HOME/plugins/sonar-android-plugin-${ANDROID_LINT_PLUGIN_VERSION}.jar \
 	https://github.com/SonarQubeCommunity/sonar-android/releases/download/${ANDROID_LINT_PLUGIN_VERSION}/sonar-android-plugin-${ANDROID_LINT_PLUGIN_VERSION}.jar
 
-ENV JAVA_PLUGIN_VERSION 4.6.0.8784
+ENV JAVA_PLUGIN_VERSION 5.9.2.16552
 RUN set -x && curl -sLo $HOME/plugins/sonar-java-plugin-${JAVA_PLUGIN_VERSION}.jar \
-	https://sonarsource.bintray.com/Distribution/sonar-java-plugin/sonar-java-plugin-${JAVA_PLUGIN_VERSION}.jar
+	https://binaries.sonarsource.com/Distribution/sonar-java-plugin/sonar-java-plugin-${JAVA_PLUGIN_VERSION}.jar
 
 ENV KOTLIN_PLUGIN_VERSION 0.5.2
 RUN set -x && curl -sLo $HOME/plugins/sonar-kotlin-plugin-${KOTLIN_PLUGIN_VERSION}.jar \
